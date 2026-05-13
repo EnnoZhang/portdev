@@ -1,0 +1,97 @@
+export default {
+  nav: {
+    about: '私について',
+    skills: 'スキル',
+    works: '作品',
+    contact: 'お問い合わせ',
+  },
+  hero: {
+    greeting: 'こんにちは、',
+    viewWorks: '作品を見る',
+    contactMe: 'お問い合わせ',
+    scrollDown: 'スクロール',
+  },
+  about: {
+    label: '私について',
+    title: '意味のある\nデジタル体験を創る',
+    yearsExp: '年の経験',
+    projects: 'プロジェクト',
+    clients: 'クライアント',
+    learnMore: '詳しく見る',
+  },
+  skills: {
+    label: '専門スキル',
+    title: '私にできること',
+  },
+  works: {
+    label: '厳選作品',
+    title: 'プロジェクト',
+    filterAll: 'すべて',
+    filterDesign: 'デザイン',
+    filterDev: '開発',
+    filterBrand: 'ブランド',
+    viewProject: 'プロジェクトを見る',
+    categories: {
+      design: 'UI/UXデザイン',
+      dev: 'フルスタック開発',
+      brand: 'ブランドデザイン',
+    },
+  },
+  testimonials: {
+    label: 'お客様の声',
+    title: 'クライアントの評価',
+    prev: '前へ',
+    next: '次へ',
+    items: [
+      {
+        text: '非常にプロフェッショナルなデザイナーで、私たちのニーズを正確に理解してくれました。期待以上の成果物を届けてくれました。強くお勧めします！',
+        name: '張偉',
+        role: 'テック企業 CEO',
+      },
+      {
+        text: '期限通りに納品され、コードの品質も高く、後のメンテナンスも容易です。これまで一緒に仕事をした中で最も信頼できる開発者の一人です。',
+        name: '李明',
+        role: 'プロダクトディレクター',
+      },
+      {
+        text: 'ブランドデザインが素晴らしく、私たちのブランドの雰囲気を完璧に捉えてくれました。チーム全員が今回のコラボレーションの成果に大変満足しています。',
+        name: '王芳',
+        role: 'マーケティングディレクター',
+      },
+    ],
+  },
+  contact: {
+    label: 'お問い合わせ',
+    title: '新しいプロジェクトを\n始めませんか？',
+    subtitle: '新しいプロジェクト、ご相談、またはただのご挨拶でも、ぜひご連絡ください。',
+    form: {
+      name: 'お名前',
+      namePlaceholder: 'お名前を入力',
+      email: 'メールアドレス',
+      emailPlaceholder: 'your@email.com',
+      subject: '件名',
+      subjectPlaceholder: 'プロジェクト / ご相談 / その他',
+      message: 'メッセージ',
+      messagePlaceholder: 'アイデアをお聞かせください...',
+      submit: '送信する',
+      submitting: '送信中...',
+      success: 'メッセージを受け取りました。すぐにご返信します！',
+      rateLimited: '送信が多すぎます。15分後にもう一度お試しください。',
+      networkError: 'ネットワークエラーです。接続を確認してください。',
+    },
+    errors: {
+      nameRequired: 'お名前を入力してください',
+      emailRequired: 'メールアドレスを入力してください',
+      emailInvalid: '有効なメールアドレスを入力してください',
+      messageRequired: 'メッセージを入力してください',
+    },
+  },
+  footer: {
+    tagline: '心を込めてデザインし、コードで実現する。',
+    links: {
+      about: '私について',
+      works: '作品',
+      contact: 'お問い合わせ',
+    },
+  },
+}

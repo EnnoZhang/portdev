@@ -1,0 +1,97 @@
+export default {
+  nav: {
+    about: '关于我',
+    skills: '技能',
+    works: '作品',
+    contact: '联系',
+  },
+  hero: {
+    greeting: '你好，我是',
+    viewWorks: '查看作品',
+    contactMe: '联系我',
+    scrollDown: '向下滚动',
+  },
+  about: {
+    label: '关于我',
+    title: '创造有意义的\n数字体验',
+    yearsExp: '年经验',
+    projects: '完成项目',
+    clients: '满意客户',
+    learnMore: '了解更多',
+  },
+  skills: {
+    label: '专业技能',
+    title: '我能做什么',
+  },
+  works: {
+    label: '精选作品',
+    title: '我的项目',
+    filterAll: '全部',
+    filterDesign: '设计',
+    filterDev: '开发',
+    filterBrand: '品牌',
+    viewProject: '查看项目详情',
+    categories: {
+      design: 'UI/UX 设计',
+      dev: '全栈开发',
+      brand: '品牌设计',
+    },
+  },
+  testimonials: {
+    label: '客户评价',
+    title: '他们怎么说',
+    prev: '上一条',
+    next: '下一条',
+    items: [
+      {
+        text: '非常专业的设计师，能够准确理解我们的需求，交付的作品超出预期。整个合作过程非常愉快，强烈推荐！',
+        name: '张伟',
+        role: '某科技公司 CEO',
+      },
+      {
+        text: '项目按时交付，代码质量很高，后期维护也很方便。是我合作过最靠谱的开发者之一。',
+        name: '李明',
+        role: '产品总监',
+      },
+      {
+        text: '品牌设计做得非常出色，完全抓住了我们品牌的调性，团队都非常满意这次合作的成果。',
+        name: '王芳',
+        role: '市场总监',
+      },
+    ],
+  },
+  contact: {
+    label: '联系我',
+    title: '开始一个\n新项目？',
+    subtitle: '无论是新项目合作、咨询还是只是打个招呼，我都很乐意听到你的消息。',
+    form: {
+      name: '姓名',
+      namePlaceholder: '你的名字',
+      email: '邮箱',
+      emailPlaceholder: 'your@email.com',
+      subject: '主题',
+      subjectPlaceholder: '项目合作 / 咨询 / 其他',
+      message: '消息',
+      messagePlaceholder: '告诉我你的想法...',
+      submit: '发送消息',
+      submitting: '发送中...',
+      success: '消息已发送，我会尽快回复你！',
+      rateLimited: '提交过于频繁，请 15 分钟后再试。',
+      networkError: '网络错误，请检查连接后重试。',
+    },
+    errors: {
+      nameRequired: '请输入你的姓名',
+      emailRequired: '请输入邮箱地址',
+      emailInvalid: '请输入有效的邮箱地址',
+      messageRequired: '请输入消息内容',
+    },
+  },
+  footer: {
+    tagline: '用心设计，用代码实现。',
+    links: {
+      about: '关于',
+      works: '作品',
+      contact: '联系',
+    },
+  },
+}

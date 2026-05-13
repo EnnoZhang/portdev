@@ -1,0 +1,97 @@
+export default {
+  nav: {
+    about: 'About',
+    skills: 'Skills',
+    works: 'Works',
+    contact: 'Contact',
+  },
+  hero: {
+    greeting: "Hi, I'm",
+    viewWorks: 'View Works',
+    contactMe: 'Contact Me',
+    scrollDown: 'Scroll Down',
+  },
+  about: {
+    label: 'About Me',
+    title: 'Creating Meaningful\nDigital Experiences',
+    yearsExp: 'Years Exp.',
+    projects: 'Projects Done',
+    clients: 'Happy Clients',
+    learnMore: 'Learn More',
+  },
+  skills: {
+    label: 'Expertise',
+    title: 'What I Do',
+  },
+  works: {
+    label: 'Selected Works',
+    title: 'My Projects',
+    filterAll: 'All',
+    filterDesign: 'Design',
+    filterDev: 'Dev',
+    filterBrand: 'Brand',
+    viewProject: 'View Project',
+    categories: {
+      design: 'UI/UX Design',
+      dev: 'Full-Stack Dev',
+      brand: 'Brand Design',
+    },
+  },
+  testimonials: {
+    label: 'Testimonials',
+    title: 'What They Say',
+    prev: 'Previous',
+    next: 'Next',
+    items: [
+      {
+        text: 'An incredibly professional designer who understood our needs perfectly. The delivered work exceeded our expectations. Highly recommended!',
+        name: 'Zhang Wei',
+        role: 'CEO, Tech Company',
+      },
+      {
+        text: 'Delivered on time with high-quality code that is easy to maintain. One of the most reliable developers I have worked with.',
+        name: 'Li Ming',
+        role: 'Product Director',
+      },
+      {
+        text: 'Outstanding brand design that perfectly captured our brand identity. The whole team was very satisfied with the results.',
+        name: 'Wang Fang',
+        role: 'Marketing Director',
+      },
+    ],
+  },
+  contact: {
+    label: 'Contact',
+    title: 'Start a New\nProject?',
+    subtitle: "Whether it's a new project, a consultation, or just saying hello — I'd love to hear from you.",
+    form: {
+      name: 'Name',
+      namePlaceholder: 'Your name',
+      email: 'Email',
+      emailPlaceholder: 'your@email.com',
+      subject: 'Subject',
+      subjectPlaceholder: 'Project / Consultation / Other',
+      message: 'Message',
+      messagePlaceholder: 'Tell me about your idea...',
+      submit: 'Send Message',
+      submitting: 'Sending...',
+      success: 'Message sent! I will get back to you soon.',
+      rateLimited: 'Too many requests. Please try again in 15 minutes.',
+      networkError: 'Network error. Please check your connection.',
+    },
+    errors: {
+      nameRequired: 'Please enter your name',
+      emailRequired: 'Please enter your email',
+      emailInvalid: 'Please enter a valid email address',
+      messageRequired: 'Please enter a message',
+    },
+  },
+  footer: {
+    tagline: 'Designed with care, built with code.',
+    links: {
+      about: 'About',
+      works: 'Works',
+      contact: 'Contact',
+    },
+  },
+}

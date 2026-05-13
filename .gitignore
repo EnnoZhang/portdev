@@ -1,0 +1,11 @@
+node_modules/
+frontend/node_modules/
+.env
+.DS_Store
+data/
+uploads/
+*.db
+# 构建产物由 CI/CD 生成，不提交
+public/assets/
+public/index.html
+public/admin.html
