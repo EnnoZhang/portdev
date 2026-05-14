@@ -12,6 +12,7 @@ export default defineConfig({
   build: {
     outDir: '../public',
     emptyOutDir: true,
+    sourcemap: false,
     rollupOptions: {
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
