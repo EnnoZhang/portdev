@@ -81,7 +81,7 @@ app.use((err, req, res, next) => {
 });
 
 // ── Start ─────────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n🚀 Portfolio server running at http://localhost:${PORT}`);
   console.log(`   Environment: ${process.env.NODE_ENV}`);
   console.log(`   Admin panel: http://localhost:${PORT}/admin.html\n`);
