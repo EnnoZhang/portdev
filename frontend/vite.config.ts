@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 
-// 开发用完整 bundler；生产构建用 runtime-only，避免打包进编译器触发 CSP 的 unsafe-eval 限制
+// 开发用完整 bundler；生产用 runtime-only，避免在严格 CSP（如 Railway HTTPS）下触发 eval / new Function
 export default defineConfig(({ command }) => ({
   plugins: [vue({
     template: {
@@ -17,6 +17,10 @@ export default defineConfig(({ command }) => ({
       vue: command === 'serve'
           ? 'vue/dist/vue.esm-bundler.js'
           : 'vue/dist/vue.runtime.esm-bundler.js',
+      // 主页使用 vue-i18n；完整包含 JIT 消息编译，会违反 script-src（无 unsafe-eval）。后台入口未用 i18n。
+      'vue-i18n': command === 'serve'
+          ? 'vue-i18n'
+          : 'vue-i18n/dist/vue-i18n.runtime.mjs',
     },
   },
   build: {
