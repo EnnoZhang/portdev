@@ -42,15 +42,15 @@
 
 ### 1. 安装依赖
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 ### 2. 配置环境变量
 
 复制 `.env.example` 为 `.env`，修改配置：
 
-\`\`\`env
+```env
 PORT=3001
 NODE_ENV=development
 
@@ -67,17 +67,17 @@ SMTP_PORT=587
 SMTP_USER=your@gmail.com
 SMTP_PASS=your_app_password
 NOTIFY_EMAIL=your@gmail.com
-\`\`\`
+```
 
 ### 3. 启动服务
 
-\`\`\`bash
+```bash
 # 开发模式（自动重启）
 npm run dev
 
 # 生产模式
 npm start
-\`\`\`
+```
 
 ### 4. 访问网站
 
@@ -89,16 +89,16 @@ npm start
 
 ### 公开 API
 
-\`\`\`
+```
 GET  /api/profile          # 获取个人信息
 GET  /api/skills           # 获取技能列表
 GET  /api/projects         # 获取作品列表（可选 ?category=design|dev|brand）
 POST /api/contact          # 提交联系表单
-\`\`\`
+```
 
 ### 管理 API（需要 JWT）
 
-\`\`\`
+```
 POST   /api/admin/login                    # 登录
 GET    /api/admin/messages                 # 获取消息列表
 PATCH  /api/admin/messages/:id/read        # 标记已读
@@ -114,7 +114,7 @@ DELETE /api/admin/skills/:id               # 删除技能
 GET    /api/admin/profile                  # 获取个人信息
 PUT    /api/admin/profile                  # 更新个人信息
 POST   /api/admin/upload                   # 上传图片
-\`\`\`
+```
 
 
 ### 服务器 PaaS 平台（最简单）
@@ -140,7 +140,7 @@ POST   /api/admin/upload                   # 上传图片
 
 #### 使用 VPS（传统方式）
 
-\`\`\`bash
+```bash
 # 1. 连接服务器
 ssh root@your_server_ip
 
@@ -169,7 +169,7 @@ apt-get install nginx
 nano /etc/nginx/sites-available/portfolio
 # 配置反向代理到 localhost:3001
 nginx -t && systemctl reload nginx
-\`\`\`
+```
 
 ## 安全建议
 
@@ -189,12 +189,12 @@ nginx -t && systemctl reload nginx
 
 ### 修改配色
 编辑 `public/css/style.css` 中的 CSS 变量：
-\`\`\`css
+```css
 :root {
   --color-accent: #e8d5b7;  /* 主色调 */
   --color-accent-2: #c9a96e; /* 辅助色 */
 }
-\`\`\`
+```
 
 ## 常见问题
 
