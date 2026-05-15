@@ -206,8 +206,13 @@ POST   /api/admin/upload                   # 上传图片
 
 1. 注册 Railway 账号
 2. 连接 GitHub 仓库
-3. 添加环境变量（.env 内容）
-4. 自动部署完成
+3. 添加环境变量（`.env` 内容），**`NODE_ENV=production`**
+4. 在 Railway 服务设置中确认：
+   - **Build Command**：`npm run build`（`public/` 不在 git 中，必须构建）
+   - **Start Command**：`npm start`（只起一个 Node 进程，同时提供 API + 静态页）
+5. 访问 **前台** `https://你的域名/`、**后台** `https://你的域名/admin.html`（无需再单独起 Vite）
+
+若主页仍黑屏：部署后 **硬刷新**（Ctrl+F5），或清空站点缓存；旧版 `main-*.js` 可能仍触发 CSP 的 `unsafe-eval` 报错。
 
 #### 使用 VPS（传统方式）
 

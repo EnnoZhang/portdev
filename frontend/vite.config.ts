@@ -3,7 +3,10 @@ import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 
 // 开发用完整 bundler；生产用 runtime-only，避免在严格 CSP（如 Railway HTTPS）下触发 eval / new Function
-export default defineConfig(({ command }) => ({
+export default defineConfig(({ command, mode }) => {
+  const isProdBuild = command === 'build' && mode === 'production'
+
+  return {
   plugins: [vue({
     template: {
       compilerOptions: {
@@ -23,6 +26,14 @@ export default defineConfig(({ command }) => ({
           : 'vue-i18n/dist/vue-i18n.runtime.mjs',
     },
   },
+  define: isProdBuild
+    ? {
+        __VUE_I18N_FULL_INSTALL__: true,
+        __VUE_I18N_LEGACY_API__: false,
+        __INTLIFY_JIT_COMPILATION__: false,
+        __INTLIFY_DROP_MESSAGE_COMPILER__: true,
+      }
+    : undefined,
   build: {
     outDir: '../public',
     emptyOutDir: true,
@@ -42,4 +53,5 @@ export default defineConfig(({ command }) => ({
       },
     },
   },
-}))
+}
+})
