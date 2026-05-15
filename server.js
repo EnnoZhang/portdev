@@ -12,7 +12,7 @@ const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // ── Security middleware ───────────────────────────────────────────────────────
 app.use(helmet({
@@ -23,7 +23,9 @@ app.use(helmet({
       fontSrc: ["'self'", 'https://fonts.gstatic.com'],
       scriptSrc: ["'self'", "'unsafe-inline'"],
       imgSrc: ["'self'", 'data:', 'https:'],
-      connectSrc: ["'self'"],
+      connectSrc: ["'self'", 'https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
+      // 纯 http 本地访问时，upgrade-insecure-requests 会把脚本等子资源改成 https，导致加载失败、白/黑屏
+      upgradeInsecureRequests: process.env.NODE_ENV === 'production' ? [] : null,
     },
   },
 }));
@@ -81,7 +83,7 @@ app.use((err, req, res, next) => {
 });
 
 // ── Start ─────────────────────────────────────────────────────────────────────
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, () => {
   console.log(`\n🚀 Portfolio server running at http://localhost:${PORT}`);
   console.log(`   Environment: ${process.env.NODE_ENV}`);
   console.log(`   Admin panel: http://localhost:${PORT}/admin.html\n`);

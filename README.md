@@ -51,7 +51,7 @@ npm install
 复制 `.env.example` 为 `.env`，修改配置：
 
 \`\`\`env
-PORT=3000
+PORT=3001
 NODE_ENV=development
 
 # 管理员账号（请修改！）
@@ -81,8 +81,8 @@ npm start
 
 ### 4. 访问网站
 
-- **前台**: http://localhost:3000
-- **管理后台**: http://localhost:3000/admin.html
+- **前台**: http://localhost:3001
+- **管理后台**: http://localhost:3001/admin.html
 - **默认账号**: admin / admin123（请立即修改！）
 
 ## API 文档
@@ -238,7 +238,7 @@ pm2 save
 # 7. 配置 Nginx 反向代理（可选）
 apt-get install nginx
 nano /etc/nginx/sites-available/portfolio
-# 配置反向代理到 localhost:3000
+# 配置反向代理到 localhost:3001
 nginx -t && systemctl reload nginx
 \`\`\`
 

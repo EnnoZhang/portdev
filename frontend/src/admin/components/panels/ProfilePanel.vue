@@ -60,7 +60,7 @@ async function save() {
   saving.value = false
   saveError.value = !res.success
   saveMsg.value = res.success ? '✓ 已保存' : '保存失败'
-  if (res.success) setTimeout(() => { saveMsg.value = '' }, 3000)
+  if (res.success) setTimeout(() => { saveMsg.value = '' }, 3001)
 }
 
 async function handleUpload(e: Event) {

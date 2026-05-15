@@ -2,11 +2,11 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 
-export default defineConfig({
+// 开发用完整 bundler；生产构建用 runtime-only，避免打包进编译器触发 CSP 的 unsafe-eval 限制
+export default defineConfig(({ command }) => ({
   plugins: [vue({
     template: {
       compilerOptions: {
-        // 禁用运行时编译，避免CSP错误
         isCustomElement: (tag) => false,
       }
     }
@@ -14,13 +14,14 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      'vue': 'vue/dist/vue.esm-bundler.js'
+      vue: command === 'serve'
+          ? 'vue/dist/vue.esm-bundler.js'
+          : 'vue/dist/vue.runtime.esm-bundler.js',
     },
   },
   build: {
     outDir: '../public',
     emptyOutDir: true,
-    sourcemap: false,
     rollupOptions: {
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
@@ -32,9 +33,9 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'http://localhost:3001',
         changeOrigin: true,
       },
     },
   },
-})
+}))
